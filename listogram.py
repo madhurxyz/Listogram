@@ -26,8 +26,9 @@ class Listogram(list):
 
     def __contains__(self, item):
         """Return True if the given item is in this histogram, or False"""
-        # TODO: check if item is in histogram
-        pass
+         if self._index(item) is None:
+            return False
+        return True
 
     def _index(self, target):
         """Return the index of the (target, count) entry if found, or None"""
