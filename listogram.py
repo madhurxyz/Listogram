@@ -32,8 +32,10 @@ class Listogram(list):
 
     def _index(self, target):
         """Return the index of the (target, count) entry if found, or None"""
-        # TODO: implement linear search to find an item's index
-        pass
+        for index, (word, count) in enumerate(self):
+            if word == target:
+                return index
+        return None
 
 
 def test_histogram(text_list):
