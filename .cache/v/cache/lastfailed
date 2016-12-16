@@ -1,6 +1,3 @@
 {
-  "test_listogram.py::ListogramTest::test_contains": true, 
-  "test_listogram.py::ListogramTest::test_count": true, 
-  "test_listogram.py::ListogramTest::test_items": true, 
-  "test_listogram.py::ListogramTest::test_update": true
+  "listogram.py": true
 }

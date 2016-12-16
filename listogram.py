@@ -13,11 +13,17 @@ class Listogram(list):
 
     def update(self, iterable):
         """Update this histogram with the items in the given iterable"""
-         super(Listogram, self).__init__()
-        self.types = 0  # the number of distinct item types in this histogram
-        self.tokens = 0  # the total count of all item tokens in this histogram
-        if iterable:
-            self.update(iterable)
+        # foo[1] = ('b','friend')
+        for item in iterable:
+            index = self._index(item)
+            if index is None:
+                self.append((item, 1))
+                self.types += 1
+                self.tokens += 1
+            else:
+                count = self[index][1]
+                self[index] = (item, count + 1)
+                self.tokens += 1
 
 
     def count(self, item):
