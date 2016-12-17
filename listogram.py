@@ -10,7 +10,9 @@ class Listogram(list):
         self.tokens = 0  # the total count of all item tokens in this histogram
         if iterable:
             self.update(iterable)
-
+    #Best Case Omega(n)
+    #Worst Case O(n)
+    #Answer: Theta(n)
     def update(self, iterable):
         """Update this histogram with the items in the given iterable"""
         # foo[1] = ('b','friend')
