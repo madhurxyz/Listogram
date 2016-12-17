@@ -27,7 +27,9 @@ class Listogram(list):
                 self[index] = (item, count + 1)
                 self.tokens += 1
 
-
+    #Best Case Omega(n)
+    #Worst Case O(n)
+    #Answer: Theta(n)
     def count(self, item):
         """Return the count of the given item in this histogram, or 0"""
         index = self._index(item)
